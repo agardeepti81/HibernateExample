@@ -21,6 +21,7 @@
         <property name="current_session_context_class">thread</property>
 
         <mapping class="com.test.project.HibernateJPABeginner.models.User" />
+        <mapping class="com.test.project.HibernateJPABeginner.models.Employee" />
 
     </session-factory>
 </hibernate-configuration>

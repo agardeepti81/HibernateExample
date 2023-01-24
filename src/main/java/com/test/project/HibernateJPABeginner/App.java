@@ -45,11 +45,11 @@ public class App {
 			System.out.println("Creating and Reading new Users");
 			tx = session.beginTransaction();
 			//Create User
-			User u1 = new User("User 1","user0011@yahoo.com","password1",25,26789.45,"Washington DC");
-			User u2 = new User("User 2","user0012@yahoo.com","password2",26,26789.45,"Austin");
-			User u3 = new User("User 3","user0013@yahoo.com","password3",27,26789.45,"Detroit");
-			User u4 = new User("User 4","user0014@yahoo.com","password4",28,26789.45,"Seattle");
-			User u5 = new User("User 5","user0015@yahoo.com","password5",29,26789.45,"Charlotte");
+			User u1 = new User("User 1","user0011@yahoo.com","password1",25,46789.45,"Washington DC");
+			User u2 = new User("User 2","user0012@yahoo.com","password2",26,57789.45,"Austin");
+			User u3 = new User("User 3","user0013@yahoo.com","password3",27,35789.45,"Detroit");
+			User u4 = new User("User 4","user0014@yahoo.com","password4",28,38789.45,"Seattle");
+			User u5 = new User("User 5","user0015@yahoo.com","password5",29,53789.45,"Charlotte");
 			session.persist(u1);
 			session.persist(u2);
 			session.persist(u3);
@@ -62,26 +62,26 @@ public class App {
 			System.out.println(list+"\n");
 			
 			//Deleting user with id 3
-			System.out.println("Delete user with id 3");
-			tx1 = session.beginTransaction();
-			session.merge(u3);
-			session.remove(u3);
-			tx1.commit();
-			//Read User
-			list = session.createQuery("from User", User.class).getResultList();
-			System.out.println(list+"\n");
-			
+//			System.out.println("Delete user with id 3");
+//			tx1 = session.beginTransaction();
+//			session.merge(u3);
+//			session.remove(u3);
+//			tx1.commit();
+//			//Read User
+//			list = session.createQuery("from User", User.class).getResultList();
+//			System.out.println(list+"\n");
+//			
 			//Update User
-			System.out.println("Update user with id 2");
-			tx2 = session.beginTransaction();
-			session.merge(u2);
-			u2.setCity("Chicago");
-			u2.setFullName("Name Updated");
-			session.persist(u2);
-			tx2.commit();
-			//Read User
-			list = session.createQuery("from User", User.class).getResultList();
-			System.out.println(list+"\n");
+//			System.out.println("Update user with id 2");
+//			tx2 = session.beginTransaction();
+//			session.merge(u2);
+//			u2.setCity("Chicago");
+//			u2.setFullName("Name Updated");
+//			session.persist(u2);
+//			tx2.commit();
+//			//Read User
+//			list = session.createQuery("from User", User.class).getResultList();
+//			System.out.println(list+"\n");
 			
 
 		} catch (HibernateException ex) {

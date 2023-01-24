@@ -36,9 +36,9 @@ public class User {
 	@NonNull
 	String password;
 	@NonNull
-	Integer age;
+	int age;
 	@NonNull
-	Double salary;
+	double salary;
 	@NonNull
 	String city;
 }
